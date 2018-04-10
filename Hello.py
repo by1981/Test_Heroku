@@ -36,7 +36,7 @@ api = tweepy.API(auth, parser=tweepy.parsers.JSONParser())
 
 # Create a complimentary status update with a mention to another user
 #api = tweepy.API(auth)
-api.update_status("Happy Tuesday!!")
+api.update_status("Happy Tuesday, one day closer to the weekend!!")
 
 #1
 

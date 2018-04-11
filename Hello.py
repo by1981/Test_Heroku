@@ -45,7 +45,7 @@ api = tweepy.API(auth, wait_on_rate_limit=True)
 target_user = "@CNN"
 def TweetOut(tweet_number):
     sentiments = []
-    for status in tweepy.Cursor(api.search, q=target_user,tweet_mode="extended").items(100):
+    for status in tweepy.Cursor(api.search, q=target_user,tweet_mode="extended").items(500):
         tweet = status._json
     
     # Run Vader Analysis on each tweet

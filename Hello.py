@@ -75,7 +75,9 @@ def TweetOut(tweet_number):
          sentiments_pd["Compound"], marker="o", linewidth=0.5,
          alpha=0.8)
     ax = plt.gca().invert_xaxis()
-    plt.show()
+    plt.savefig('Sentiment Analysis.png')
+    api.update_with_media("Sentiment Analysis.png")
+    plt.clf()
     
 repeater=0
 while(True):

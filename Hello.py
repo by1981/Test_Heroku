@@ -65,7 +65,7 @@ def TweetOut(tweet_number):
                        "Neutral": neg,
                         "Tweets Ago": tweet_number,
                           "Tweet_text": tweet["full_text"],
-                          "username_1": tweet['user']['name']})
+                          "username_1": tweet['user']['screen_name']})
 
     sentiments_pd = pd.DataFrame.from_dict(sentiments)
     #plt.legend(sentiments_pd["username_1"],mode="expand", title="Tweets")

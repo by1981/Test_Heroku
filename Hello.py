@@ -75,7 +75,6 @@ def TweetOut(tweet_number):
          sentiments_pd["Compound"], marker="o", linewidth=0.5,
          alpha=0.8)
     ax = plt.gca().invert_xaxis()
-    #plt.savefig('Sentiment Analysis.png')
     plt.show()
     
 repeater=0
@@ -85,7 +84,7 @@ while(True):
     TweetOut(repeater)
 
     # Once tweeted, wait 60 seconds before doing anything else
-    time.sleep(60)
+    time.sleep(20)
 
     # Add 1 to the counter prior to re-running the loop
     repeater = repeater + 1

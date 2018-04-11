@@ -77,7 +77,7 @@ def TweetOut(tweet_number):
     plt.plot(np.arange(len(sentiments_pd["Compound"])),
          sentiments_pd["Compound"], marker="o", linewidth=0.5,
          alpha=0.8)
-    plt.legend(sentiments_pd[username_1],loc='upper right', title="Tweets")
+    plt.legend(sentiments_pd['username_1'],loc='upper right', title="Tweets")
     plt.grid()
     ax = plt.gca().invert_xaxis()
     plt.savefig('Sentiment Analysis.png')

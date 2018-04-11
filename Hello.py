@@ -53,7 +53,7 @@ def TweetOut(tweet_number):
         pos = analyzer.polarity_scores(tweet["full_text"])["pos"]
         neu = analyzer.polarity_scores(tweet["full_text"])["neu"]
         neg = analyzer.polarity_scores(tweet["full_text"])["neg"]
-        tweets_ago = counter
+        
         
     # Add sentiments for each tweet into an array
         sentiments.append({"Date": tweet["created_at"], 

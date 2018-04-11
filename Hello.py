@@ -16,17 +16,17 @@ import json
 import tweepy
 from datetime import datetime
 import time
-from config import consumer_key, consumer_secret,  access_token, access_token_secret
+#from config import consumer_key, consumer_secret,  access_token, access_token_secret
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 analyzer = SentimentIntensityAnalyzer()
 # In[ ]:
 
 
 # Twitter API Keys
-consumer_key = consumer_key
-consumer_secret = consumer_secret
-access_token = access_token
-access_token_secret = access_token_secret
+consumer_key = ENV[Twitter_consumer_key]
+consumer_secret = ENV[Twitter_consumer_secret]
+access_token = ENV[Twitter_access_token]
+access_token_secret = ENV[Twitter_access_token_secret]
 
 
 # In[ ]:
@@ -75,7 +75,7 @@ def TweetOut(tweet_number):
     plt.plot(np.arange(len(sentiments_pd["Compound"])),
          sentiments_pd["Compound"], marker="o", linewidth=0.5,
          alpha=0.8)
-    plt.legend(target_user,loc='upper right', title="Tweets")
+    plt.legend(sentiments_pd[username_1],loc='upper right', title="Tweets")
     plt.grid()
     ax = plt.gca().invert_xaxis()
     plt.savefig('Sentiment Analysis.png')

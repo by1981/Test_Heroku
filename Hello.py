@@ -3,7 +3,7 @@
 
 # ## Complimenter
 
-# In[ ]:
+
 
 from os import environ
 
@@ -17,14 +17,9 @@ import json
 import tweepy
 from datetime import datetime
 import time
-#from config import consumer_key, consumer_secret,  access_token, access_token_secret
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 analyzer = SentimentIntensityAnalyzer()
-# In[ ]:
-#import os
-# is_prod = os.environ.get('IS_HEROKU', None)
 
-# if is_prod:
 
 # Twitter API Keys
 consumer_key = environ['Twitter_consumer_key']
@@ -45,7 +40,6 @@ api = tweepy.API(auth, wait_on_rate_limit=True)
 
 
 # Create a complimentary status update with a mention to another user
-#api = tweepy.API(auth)
 target_user = "@CNN"
 def TweetOut(tweet_number):
     sentiments = []
@@ -68,7 +62,6 @@ def TweetOut(tweet_number):
                           "username_1": tweet['user']['screen_name']})
 
     sentiments_pd = pd.DataFrame.from_dict(sentiments)
-    #plt.legend(sentiments_pd["username_1"],mode="expand", title="Tweets")
     plt.figure(figsize=(9,7))
     plt.legend((tweet['user']['screen_name']))
     plt.title("Sentiment Analysis of Tweets (%s) for %s" % (time.strftime("%x"), target_user))

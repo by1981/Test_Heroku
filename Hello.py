@@ -27,10 +27,10 @@ analyzer = SentimentIntensityAnalyzer()
 # if is_prod:
 
 # Twitter API Keys
-consumer_key = os.environ['Twitter_consumer_key']
-consumer_secret = os.environ['Twitter_consumer_secret']
-access_token = os.environ['Twitter_access_token']
-access_token_secret = os.environ['Twitter_access_token_secret']
+consumer_key = environ['Twitter_consumer_key']
+consumer_secret = environ['Twitter_consumer_secret']
+access_token = environ['Twitter_access_token']
+access_token_secret = environ['Twitter_access_token_secret']
 
 
 # In[ ]:

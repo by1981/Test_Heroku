@@ -1,1 +1,5 @@
 tweepy==3.5.0
+numpy==1.14.0
+pandas==0.22.0
+matplotlib==2.1.2
+vaderSentiment==2.5
